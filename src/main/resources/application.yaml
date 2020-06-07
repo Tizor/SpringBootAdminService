@@ -1,0 +1,22 @@
+server:
+  port: 9191
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    hostname: localhost
+spring:
+  application:
+    name: spring-boot-admin
+  security:
+    user:
+      name: admin
+      password: admin
+
+#    As a Eureka client, the Admin server also registers itself as a service with Eureka.
+#    To keep this from happening, you can set the eureka.client.register-with-eureka
+#    register-with-eureka: false
